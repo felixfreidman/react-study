@@ -20,18 +20,24 @@ class Layout extends Component {
         })
     }
     render() {
+        // Для вытягивания ключа menu можно использовать реструктуризацию,
+        // это улучшит читаемость кода
+        const { menu } = this.state;
+        // С чилдреном такая же история
+        const { children } = this.props;
+
         return (
             <div className={classes.Layout}>
                 <Drawer
-                    isOpen={this.state.menu}
+                    isOpen={menu}
                     onClose={this.menuCloseHandler}
                 />
                 <MenuToggle
                     onToggle={this.toggleMenuHandler}
-                    isOpen={this.state.menu}
+                    isOpen={menu}
                 />
                 <main>
-                    {this.props.children}
+                    {children}
                 </main>
             </div>
         )

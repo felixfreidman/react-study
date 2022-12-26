@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import classes from './QuizList.module.css'
 
 class QuizList extends Component {
+    // тут можно на 16 строке использовать шаблонные строки
+    // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Template_literals
 
     renderQuizes() {
         return [1, 2, 3].map((quiz, index) => {
