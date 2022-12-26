@@ -21,6 +21,7 @@ class Drawer extends Component {
                 <li key={index}>
                     <NavLink
                         to={link.to}
+                        // откуда приходит isActive?
                         className={({ isActive }) => isActive ? "active" : null}
                         onClick={this.clickHandler}>
                         {

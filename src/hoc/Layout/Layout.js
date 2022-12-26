@@ -23,7 +23,7 @@ class Layout extends Component {
         // Для вытягивания ключа menu можно использовать реструктуризацию,
         // это улучшит читаемость кода
         const { menu } = this.state;
-        // С чилдреном такая же история )
+        // С чилдреном такая же история
         const { children } = this.props;
 
         return (

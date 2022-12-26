@@ -36,6 +36,7 @@ class Quiz extends Component {
             },
         ]
     }
+
     onAnswerClickHandler = (answerId) => {
         if (this.state.answerState) {
             const key = Object.keys(this.state.answerState)[0]
@@ -43,7 +44,10 @@ class Quiz extends Component {
                 return
             }
         }
+        // тут тоже напрашивается реструктуризация
+        // const { activeQuestion, results, quiz } = this.state;
         const question = this.state.quiz[this.state.activeQuestion];
+        // const question = quiz[activeQuestion];
         const results = this.state.results;
         if (question.rightAnswerId === answerId) {
             if (!results[question.id]) {
